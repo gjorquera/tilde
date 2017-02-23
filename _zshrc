@@ -55,6 +55,7 @@ export PATH="$HOME/bin:$PATH"
 
 # Zsh Opts
 
+bindkey -v
 setopt promptsubst
 
 # Custom Local Settings
