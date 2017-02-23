@@ -13,6 +13,12 @@ My dotfiles' home.
 
         $ git clone git@github.com:gjorquera/tilde
 
+1. Install [Homebrew](https://brew.sh/) and [Homebrew Bundle](https://github.com/Homebrew/homebrew-bundle).
+
+1. Install Homebrew packages:
+
+        $ brew bundle
+
 1. Link the dotfiles you want:
 
         $ ln -sf ~/Code/tilde/_dotfile ~/.dotfile
