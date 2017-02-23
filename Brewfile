@@ -21,5 +21,6 @@ cask 'colorpicker'
 cask 'colorpicker-hex'
 cask 'keepingyouawake'
 cask 'skitch'
+cask 'spotify'
 
 # vim: filetype=ruby
