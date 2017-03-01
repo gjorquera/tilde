@@ -49,6 +49,20 @@ zstyle ':completion:*' menu select
 zstyle ':completion:::git:*' script /usr/local/share/zsh/site-functions/git-completion.bash
 fpath=(/usr/local/share/zsh/site-functions $fpath)
 
+# History
+
+HISTSIZE=10000
+HISTFILE=$HOME/.zsh_history
+SAVEHIST=10000
+
+setopt extended_history
+setopt hist_expire_dups_first
+setopt hist_ignore_dups
+setopt hist_ignore_space
+setopt hist_verify
+setopt inc_append_history
+setopt share_history
+
 # Path
 
 export PATH="$HOME/bin:$PATH"
@@ -56,6 +70,7 @@ export PATH="$HOME/bin:$PATH"
 # Zsh Opts
 
 bindkey -v
+bindkey "^r" history-incremental-search-backward
 setopt promptsubst
 
 # Custom Local Settings
