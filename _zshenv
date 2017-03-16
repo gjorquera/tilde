@@ -1,0 +1,7 @@
+# rbenv
+
+eval "$(rbenv init -)"
+
+# Custom Local Settings
+
+[ -f ~/.zshenv.local ] && source ~/.zshenv.local
