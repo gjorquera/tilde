@@ -140,6 +140,7 @@ prompt_git() {
     else
       ref="$DETACHED ${ref/.../}"
     fi
+    ref="$(git config user.email) $ref"
     prompt_segment $color $PRIMARY_FG
     print -Pn " $ref"
   fi
