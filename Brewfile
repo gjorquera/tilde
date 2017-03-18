@@ -1,5 +1,6 @@
 tap 'caskroom/cask'
 
+brew 'aspell'
 brew 'findutils'
 brew 'fzf'
 brew 'git'
