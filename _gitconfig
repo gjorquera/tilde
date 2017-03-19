@@ -1,0 +1,20 @@
+[branch]
+	autosetupmerge = always
+	autosetuprebase = always
+[color]
+	ui = auto
+[core]
+	editor = vim
+[fetch]
+	prune = true
+[merge]
+	ff = only
+[push]
+	default = current
+[rebase]
+	autosquash = true
+[user]
+	email = gjorquera@gmail.com
+	name = Gaston Jorquera
+[include]
+	path = ~/.gitconfig.local
