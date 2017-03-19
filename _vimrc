@@ -12,6 +12,7 @@ set background=dark
 set colorcolumn=80
 set cpt-=t
 set cursorline
+set backspace=indent,eol,start
 set expandtab
 set fillchars=
 set formatoptions+=rn
