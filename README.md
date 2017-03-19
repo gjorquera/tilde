@@ -21,7 +21,7 @@ My dotfiles' home.
 
 1. Link the dotfiles you want:
 
-        $ ln -sf ~/Code/tilde/_dotfile ~/.dotfile
+        $ ln -sf ~/Code/tilde/_<dotfile> ~/.<dotfile>
 
 ## Why?
 
