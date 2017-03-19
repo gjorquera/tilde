@@ -19,6 +19,7 @@ set formatoptions+=rn
 set formatoptions-=t
 set hlsearch
 set ignorecase
+set incsearch
 set isfname-=:
 set list listchars=tab:»»,trail:·
 set modelines=1
