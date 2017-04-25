@@ -55,14 +55,15 @@ let g:solarized_termtrans=1
 
 colorscheme solarized
 
-let mapleader = "\<Space>"
-
 autocmd Filetype gitcommit setlocal textwidth=72
 autocmd Filetype gitcommit,markdown setlocal spell
 
-" Git commands
+" Custom shortcuts
+let mapleader = "\<Space>"
+
+" Git
 nnoremap <Leader>gb :Gblame<CR>
 
-" Project commands
+" Project
 nnoremap <Leader>pt :NERDTreeToggle<CR>
 nnoremap <Leader>pf :FZF<CR>
