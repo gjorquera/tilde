@@ -1,4 +1,5 @@
 tap 'caskroom/cask'
+tap 'neovim/neovim'
 
 brew 'aspell'
 brew 'findutils'
@@ -8,6 +9,7 @@ brew 'gnu-tar'
 brew 'httpie'
 brew 'jq'
 brew 'markdown'
+brew 'neovim'
 brew 'openssl'
 brew 'p7zip'
 brew 'rbenv'
