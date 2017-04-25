@@ -52,6 +52,11 @@ fpath=(/usr/local/share/zsh/site-functions $fpath)
 
 export FZF_DEFAULT_OPTS="--exact"
 
+# PATH
+
+export PATH="/usr/local/sbin:/usr/local/bin:$PATH"
+eval "$(rbenv init -)"
+
 # History
 
 HISTSIZE=10000
@@ -198,3 +203,5 @@ prompt_agnoster_setup() {
 }
 
 prompt_agnoster_setup "$@"
+
+# vim: ft=sh
