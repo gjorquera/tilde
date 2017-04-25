@@ -48,6 +48,10 @@ zstyle ':completion:*' menu select
 zstyle ':completion:::git:*' script /usr/local/share/zsh/site-functions/git-completion.bash
 fpath=(/usr/local/share/zsh/site-functions $fpath)
 
+# FZF
+
+export FZF_DEFAULT_OPTS="--exact"
+
 # History
 
 HISTSIZE=10000
