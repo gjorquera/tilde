@@ -1,12 +1,17 @@
 call plug#begin('~/.vim/plugged')
 
+" Core
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'ervandew/supertab'
 Plug 'junegunn/fzf.vim'
 Plug 'scrooloose/nerdtree'
-Plug 'tpope/vim-fugitive'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
+
+" Source Control
+Plug 'tpope/vim-fugitive'
+
+" Themes
 Plug 'iCyMind/NeoSolarized'
 
 call plug#end()
