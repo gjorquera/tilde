@@ -73,6 +73,9 @@ colorscheme NeoSolarized
 autocmd Filetype gitcommit setlocal textwidth=72
 autocmd Filetype gitcommit,markdown setlocal spell
 
+autocmd Filetype java setlocal ts=4 sts=4 sw=4
+autocmd Filetype cfg setlocal ft=dosini ts=4 sts=4 sw=4
+
 " Custom shortcuts
 let mapleader = "\<Space>"
 nnoremap <Leader>gb :Gblame<CR>
