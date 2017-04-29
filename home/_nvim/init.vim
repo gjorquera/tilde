@@ -52,13 +52,16 @@ set textwidth=80
 set wildignore+=*/tmp/*,*.so,*.o
 
 set winwidth=84
-set winheight=5
-set winminheight=5
+set winheight=7
+set winminheight=7
 set winheight=999
 
 let g:netrw_dirhistmax=0
 
 let g:airline_powerline_fonts = 1
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#fnamemod = ':t'
+let g:airline#extensions#tabline#show_buffers = 0
 
 colorscheme NeoSolarized
 
@@ -68,5 +71,17 @@ autocmd Filetype gitcommit,markdown setlocal spell
 " Custom shortcuts
 let mapleader = "\<Space>"
 nnoremap <Leader>gb :Gblame<CR>
+nnoremap <Leader>gf :BCommits<CR>
+nnoremap <Leader>gl :Commits<CR>
+nnoremap <Leader>gs :GFiles?<CR>
+nnoremap <Leader>pb :Buffers<CR>
+nnoremap <Leader>pf :Files<CR>
+nnoremap <Leader>ps :Ag<CR>
 nnoremap <Leader>pt :NERDTreeToggle<CR>
-nnoremap <Leader>pf :FZF<CR>
+nnoremap <Leader>pw :Ag <C-R><C-W><CR>
+
+command! -bang -nargs=* Ag
+  \ call fzf#vim#ag(<q-args>,
+  \                 <bang>0 ? fzf#vim#with_preview('up:60%')
+  \                         : fzf#vim#with_preview('right:50%:hidden', '?'),
+  \                 <bang>0)
