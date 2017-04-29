@@ -41,6 +41,7 @@ set numberwidth=5
 set relativenumber
 set rtp+=/usr/local/opt/fzf
 set shiftwidth=2
+set showtabline=2
 set smartcase
 set smartindent
 set spellfile=$HOME/.vim-spell-en.utf-8.add
@@ -49,6 +50,11 @@ set splitright
 set tabstop=2
 set textwidth=80
 set wildignore+=*/tmp/*,*.so,*.o
+
+set winwidth=84
+set winheight=5
+set winminheight=5
+set winheight=999
 
 let g:netrw_dirhistmax=0
 
