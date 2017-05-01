@@ -2,6 +2,7 @@ tap 'caskroom/cask'
 tap 'neovim/neovim'
 
 brew 'aspell'
+brew 'awscli'
 brew 'findutils'
 brew 'fzf'
 brew 'git'
