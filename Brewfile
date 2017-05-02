@@ -26,6 +26,7 @@ brew 'xz'
 
 cask 'anki'
 cask 'colorpicker-hex'
+cask 'franz'
 cask 'iterm2'
 cask 'keepingyouawake'
 cask 'skitch'
