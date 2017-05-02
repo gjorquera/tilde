@@ -25,10 +25,11 @@ brew 'wget'
 brew 'xz'
 
 cask 'anki'
-cask 'colorpicker'
 cask 'colorpicker-hex'
+cask 'iterm2'
 cask 'keepingyouawake'
 cask 'skitch'
+cask 'spectacle'
 cask 'spotify'
 
 # vim: filetype=ruby
