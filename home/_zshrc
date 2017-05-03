@@ -78,6 +78,10 @@ bindkey -v
 bindkey "^r" history-incremental-search-backward
 setopt promptsubst
 
+# tmux
+
+[ -z "$TMUX" ] && tmux new-session -A -s main
+
 # Custom Local Settings
 
 [ -f ~/.zshrc.local ] && source ~/.zshrc.local
