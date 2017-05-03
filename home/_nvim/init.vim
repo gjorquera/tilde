@@ -1,4 +1,4 @@
-call plug#begin('~/.vim/plugged')
+call plug#begin('~/.config/nvim/plugged')
 
 " Core
 Plug 'christoomey/vim-tmux-navigator'
@@ -62,7 +62,8 @@ set winheight=7
 set winminheight=7
 set winheight=999
 
-let g:netrw_dirhistmax=0
+let g:netrw_dirhistmax = 0
+let g:neosolarized_termtrans = 1
 
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
