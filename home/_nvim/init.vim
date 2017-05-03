@@ -4,6 +4,7 @@ call plug#begin('~/.vim/plugged')
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'ervandew/supertab'
 Plug 'junegunn/fzf.vim'
+Plug 'junegunn/goyo.vim'
 Plug 'scrooloose/nerdtree'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
@@ -76,20 +77,21 @@ autocmd Filetype gitcommit,markdown setlocal spell
 autocmd Filetype java setlocal ts=4 sts=4 sw=4
 autocmd Filetype cfg setlocal ft=dosini ts=4 sts=4 sw=4
 
+command! -bang -nargs=* Ag
+  \ call fzf#vim#ag(<q-args>,
+  \                 <bang>0 ? fzf#vim#with_preview('up:60%')
+  \                         : fzf#vim#with_preview('right:50%:hidden', '?'),
+  \                 <bang>0)
+
 " Custom shortcuts
 let mapleader = "\<Space>"
 nnoremap <Leader>gb :Gblame<CR>
 nnoremap <Leader>gf :BCommits<CR>
 nnoremap <Leader>gl :Commits<CR>
 nnoremap <Leader>gs :GFiles?<CR>
+nnoremap <Leader>md :Goyo<CR>
 nnoremap <Leader>pb :Buffers<CR>
 nnoremap <Leader>pf :Files<CR>
 nnoremap <Leader>ps :Ag<CR>
 nnoremap <Leader>pt :NERDTreeToggle<CR>
 nnoremap <Leader>pw :Ag <C-R><C-W><CR>
-
-command! -bang -nargs=* Ag
-  \ call fzf#vim#ag(<q-args>,
-  \                 <bang>0 ? fzf#vim#with_preview('up:60%')
-  \                         : fzf#vim#with_preview('right:50%:hidden', '?'),
-  \                 <bang>0)
