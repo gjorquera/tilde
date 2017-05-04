@@ -3,6 +3,7 @@ call plug#begin('~/.config/nvim/plugged')
 " Core
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'ervandew/supertab'
+Plug 'godlygeek/tabular'
 Plug 'junegunn/fzf.vim'
 Plug 'junegunn/goyo.vim'
 Plug 'scrooloose/nerdtree'
@@ -15,6 +16,9 @@ Plug 'tpope/vim-fugitive'
 " Themes
 Plug 'iCyMind/NeoSolarized'
 
+" Languages
+Plug 'plasticboy/vim-markdown'
+
 call plug#end()
 
 syntax on
@@ -23,6 +27,7 @@ filetype plugin indent on
 set background=dark
 set backspace=indent,eol,start
 set colorcolumn=+1
+set conceallevel=2
 set cpt-=t
 set cursorline
 set expandtab
@@ -69,6 +74,9 @@ let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#fnamemod = ':t'
 let g:airline#extensions#tabline#show_buffers = 0
+
+let g:vim_markdown_folding_disabled = 1
+let g:vim_markdown_frontmatter = 1
 
 colorscheme NeoSolarized
 
