@@ -27,7 +27,6 @@ filetype plugin indent on
 set background=dark
 set backspace=indent,eol,start
 set colorcolumn=+1
-set conceallevel=2
 set cpt-=t
 set cursorline
 set expandtab
@@ -75,6 +74,10 @@ let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#fnamemod = ':t'
 let g:airline#extensions#tabline#show_buffers = 0
 
+let g:goyo_linenr = 1
+let g:goyo_width = 85
+
+let g:vim_markdown_conceal = 0
 let g:vim_markdown_folding_disabled = 1
 let g:vim_markdown_frontmatter = 1
 
