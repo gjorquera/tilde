@@ -74,7 +74,6 @@ let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#fnamemod = ':t'
 let g:airline#extensions#tabline#show_buffers = 0
 
-let g:goyo_linenr = 1
 let g:goyo_width = 85
 
 let g:vim_markdown_conceal = 0
