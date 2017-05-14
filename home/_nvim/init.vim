@@ -17,6 +17,7 @@ Plug 'tpope/vim-fugitive'
 Plug 'iCyMind/NeoSolarized'
 
 " Languages
+Plug 'keith/swift.vim'
 Plug 'plasticboy/vim-markdown'
 
 call plug#end()
