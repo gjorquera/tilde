@@ -30,7 +30,6 @@ brew 'xz'
 
 cask 'anki'
 cask 'colorpicker-hex'
-cask 'firefox'
 cask 'franz'
 cask 'iterm2'
 cask 'keepingyouawake'
