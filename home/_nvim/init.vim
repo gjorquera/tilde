@@ -87,6 +87,8 @@ let g:VimuxOrientation = "h"
 
 colorscheme NeoSolarized
 
+autocmd VimResized * wincmd =
+
 autocmd Filetype gitcommit setlocal textwidth=72
 autocmd Filetype gitcommit,markdown setlocal spell
 
