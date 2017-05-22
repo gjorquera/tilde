@@ -1,6 +1,7 @@
 call plug#begin('~/.config/nvim/plugged')
 
 " Core
+Plug 'benmills/vimux'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'ervandew/supertab'
 Plug 'godlygeek/tabular'
@@ -81,6 +82,9 @@ let g:vim_markdown_conceal = 0
 let g:vim_markdown_folding_disabled = 1
 let g:vim_markdown_frontmatter = 1
 
+let g:VimuxHeight = "30"
+let g:VimuxOrientation = "h"
+
 colorscheme NeoSolarized
 
 autocmd Filetype gitcommit setlocal textwidth=72
@@ -107,3 +111,5 @@ nnoremap <Leader>pf :Files<CR>
 nnoremap <Leader>ps :Ag<CR>
 nnoremap <Leader>pt :NERDTreeToggle<CR>
 nnoremap <Leader>pw :Ag <C-R><C-W><CR>
+nnoremap <Leader>p! :VimuxPromptCommand<CR>
+nnoremap <Leader>p!! :VimuxRunLastCommand<CR>
