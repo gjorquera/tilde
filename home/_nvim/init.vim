@@ -112,6 +112,7 @@ nnoremap <Leader>gs :GFiles?<CR>
 
 " Project
 nnoremap <Leader>pf :Files<CR>
+nnoremap <Leader>pl :NERDTreeFind<CR>
 nnoremap <Leader>pr :Buffers<CR>
 nnoremap <Leader>ps :Ag<CR>
 nnoremap <Leader>pt :NERDTreeToggle<CR>
