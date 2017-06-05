@@ -102,17 +102,22 @@ command! -bang -nargs=* Ag
   \                         : fzf#vim#with_preview('right:50%:hidden', '?'),
   \                 <bang>0)
 
-" Custom shortcuts
 let mapleader = "\<Space>"
+
+" Git
 nnoremap <Leader>gb :Gblame<CR>
 nnoremap <Leader>gf :BCommits<CR>
 nnoremap <Leader>gl :Commits<CR>
 nnoremap <Leader>gs :GFiles?<CR>
-nnoremap <Leader>md :Goyo<CR>
-nnoremap <Leader>pb :Buffers<CR>
+
+" Project
 nnoremap <Leader>pf :Files<CR>
+nnoremap <Leader>pr :Buffers<CR>
 nnoremap <Leader>ps :Ag<CR>
 nnoremap <Leader>pt :NERDTreeToggle<CR>
 nnoremap <Leader>pw :Ag <C-R><C-W><CR>
 nnoremap <Leader>p! :VimuxPromptCommand<CR>
 nnoremap <Leader>p!! :VimuxRunLastCommand<CR>
+
+" Writing
+nnoremap <Leader>wd :Goyo<CR>
