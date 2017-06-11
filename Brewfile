@@ -28,7 +28,6 @@ brew 'watch'
 brew 'wget'
 brew 'xz'
 
-cask 'anki'
 cask 'colorpicker-hex'
 cask 'franz'
 cask 'iterm2'
