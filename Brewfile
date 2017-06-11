@@ -39,6 +39,7 @@ cask 'spotify'
 
 case Socket.gethostname
 when /seldon/i
+  cask 'cleanmymac'
   cask 'docker'
   cask 'istat-menus'
 end
