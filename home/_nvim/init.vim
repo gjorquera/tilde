@@ -29,7 +29,6 @@ filetype plugin indent on
 
 set background=dark
 set backspace=indent,eol,start
-set colorcolumn=+1
 set cpt-=t
 set cursorline
 set expandtab
@@ -89,6 +88,14 @@ let g:VimuxOrientation = "h"
 colorscheme NeoSolarized
 
 autocmd VimResized * wincmd =
+
+augroup BgHighlight
+  autocmd!
+  autocmd WinEnter * set colorcolumn=+1
+  autocmd WinEnter * set cul
+  autocmd WinLeave * set colorcolumn=0
+  autocmd WinLeave * set nocul
+augroup END
 
 autocmd Filetype gitcommit setlocal textwidth=72
 autocmd Filetype gitcommit,markdown setlocal spell
