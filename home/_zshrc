@@ -3,43 +3,16 @@
 alias df="df -h"
 alias du="du -h -d 2"
 alias less="less -r"
-alias ls="ls -Gh"
-alias mkdir="mkdir -p"
-alias vim="nvim"
-alias zmv="noglob zmv -W"
-
-alias g="git"
-alias gb="git branch"
-alias gbx="git branch -d"
-alias gbX="git branch -D"
-alias gc="git commit --verbose"
-alias gco="git checkout"
-alias gcF="git commit --verbose --amend"
-alias gcf="git commit --amend --reuse-message HEAD"
-alias gf="git fetch"
-alias gfm="git pull"
-alias gfa="git pull --all"
-alias gfr="git pull --rebase"
-alias gia="git add"
-alias gid="git diff --no-ext-diff --cached"
-alias glg="git log --graph --oneline --decorate --all"
-alias gm="git merge"
-alias gmF="git merge --no-ff"
-alias gp="git push"
-alias gpf="git push --force"
-alias gpr="git pull-request"
-alias gra="git rebase --abort"
-alias grc="git rebase --continue"
-alias gri="git rebase --interactive"
-alias gro="git for-each-ref --sort=committerdate refs/remotes/origin --format='%(HEAD) %(color:yellow)%(refname:short)%(color:reset) - %(color:red)%(objectname:short)%(color:reset) - %(contents:subject) - %(authorname) (%(color:green)%(committerdate:relative)%(color:reset))'"
-alias gwd="git diff --no-ext-diff"
-alias gws="git status --short"
 alias ll="ls -alGh"
+alias ls="ls -Gh"
 alias lsg="ll | grep"
+alias mkdir="mkdir -p"
 alias pbc="pbcopy"
 alias pbp="pbpaste"
 alias psa="ps aux"
 alias psg="ps aux | grep "
+alias vim="nvim"
+alias zmv="noglob zmv -W"
 
 # Completion
 
@@ -72,10 +45,14 @@ setopt hist_verify
 setopt inc_append_history
 setopt share_history
 
+# Theme
+
+DEFAULT_USER="$(whoami)"
+
 # Zsh Opts
 
 bindkey -v
-bindkey "^r" history-incremental-search-backward
+bindkey "^R" history-incremental-search-backward
 setopt promptsubst
 
 # tmux
@@ -86,126 +63,19 @@ setopt promptsubst
 
 [ -f ~/.zshrc.local ] && source ~/.zshrc.local
 
-# Modified agnoster theme, original https://gist.github.com/3712874
+# Plugins
 
-### Segment drawing
-# A few utility functions to make it easy and re-usable to draw segmented prompts
+export ZPLUG_HOME=/usr/local/opt/zplug
+source $ZPLUG_HOME/init.zsh
 
-CURRENT_BG='NONE'
-PRIMARY_FG=black
+zplug "agnoster/3712874", from:gist, use:agnoster.zsh-theme
+zplug "modules/git", from:prezto
+zplug "zsh-users/zsh-syntax-highlighting", defer:2
 
-# Characters
-SEGMENT_SEPARATOR="\ue0b0"
-PLUSMINUS="\u00b1"
-BRANCH="\ue0a0"
-DETACHED="\u27a6"
-CROSS="\u2718"
-LIGHTNING="\u26a1"
-GEAR="\u2699"
+if ! zplug check --verbose; then
+  zplug install
+fi
 
-# Begin a segment
-# Takes two arguments, background and foreground. Both can be omitted,
-# rendering default background/foreground.
-prompt_segment() {
-  local bg fg
-  [[ -n $1 ]] && bg="%K{$1}" || bg="%k"
-  [[ -n $2 ]] && fg="%F{$2}" || fg="%f"
-  if [[ $CURRENT_BG != 'NONE' && $1 != $CURRENT_BG ]]; then
-    print -n "%{$bg%F{$CURRENT_BG}%}$SEGMENT_SEPARATOR%{$fg%}"
-  else
-    print -n "%{$bg%}%{$fg%}"
-  fi
-  CURRENT_BG=$1
-  [[ -n $3 ]] && print -n $3
-}
-
-# End the prompt, closing any open segments
-prompt_end() {
-  if [[ -n $CURRENT_BG ]]; then
-    print -n "%{%k%F{$CURRENT_BG}%}$SEGMENT_SEPARATOR"
-  else
-    print -n "%{%k%}"
-  fi
-  print -n "%{%f%}"
-  CURRENT_BG=''
-}
-
-### Prompt components
-# Each component will draw itself, and hide itself if no information needs to be shown
-
-# Git: branch/detached head, dirty status
-prompt_git() {
-  local color ref
-  is_dirty() {
-    test -n "$(git status --porcelain --ignore-submodules)"
-  }
-  ref="$vcs_info_msg_0_"
-  if [[ -n "$ref" ]]; then
-    if is_dirty; then
-      color=yellow
-      ref="${ref} $PLUSMINUS"
-    else
-      color=green
-      ref="${ref} "
-    fi
-    if [[ "${ref/.../}" == "$ref" ]]; then
-      ref="$BRANCH $ref"
-    else
-      ref="$DETACHED ${ref/.../}"
-    fi
-    prompt_segment $color $PRIMARY_FG
-    print -Pn " $ref"
-  fi
-}
-
-# Dir: current working directory
-prompt_dir() {
-  prompt_segment blue $PRIMARY_FG ' %1~ '
-}
-
-# Status:
-# - was there an error
-# - am I root
-# - are there background jobs?
-prompt_status() {
-  local symbols
-  symbols=()
-  [[ $RETVAL -ne 0 ]] && symbols+="%{%F{red}%}$CROSS"
-  [[ $UID -eq 0 ]] && symbols+="%{%F{yellow}%}$LIGHTNING"
-  [[ $(jobs -l | wc -l) -gt 0 ]] && symbols+="%{%F{cyan}%}$GEAR"
-
-  [[ -n "$symbols" ]] && prompt_segment $PRIMARY_FG default " $symbols "
-}
-
-## Main prompt
-prompt_agnoster_main() {
-  RETVAL=$?
-  CURRENT_BG='NONE'
-  prompt_status
-  prompt_dir
-  prompt_git
-  prompt_end
-}
-
-prompt_agnoster_precmd() {
-  vcs_info
-  PROMPT='%{%f%b%k%}$(prompt_agnoster_main) '
-}
-
-prompt_agnoster_setup() {
-  autoload -Uz add-zsh-hook
-  autoload -Uz vcs_info
-
-  prompt_opts=(cr subst percent)
-
-  add-zsh-hook precmd prompt_agnoster_precmd
-
-  zstyle ':vcs_info:*' enable git
-  zstyle ':vcs_info:*' check-for-changes false
-  zstyle ':vcs_info:git*' formats '%b'
-  zstyle ':vcs_info:git*' actionformats '%b (%a)'
-}
-
-prompt_agnoster_setup "$@"
+zplug load
 
 # vim: ft=sh
