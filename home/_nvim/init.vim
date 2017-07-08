@@ -111,9 +111,9 @@ nnoremap <Leader>gl :Commits<CR>
 nnoremap <Leader>gs :GFiles?<CR>
 
 " Project
+nnoremap <Leader>pb :Buffers<CR>
 nnoremap <Leader>pf :Files<CR>
 nnoremap <Leader>pl :NERDTreeFind<CR>
-nnoremap <Leader>pr :Buffers<CR>
 nnoremap <Leader>ps :Ag<CR>
 nnoremap <Leader>pt :NERDTreeToggle<CR>
 nnoremap <Leader>pw :Ag <C-R><C-W><CR>
