@@ -117,8 +117,13 @@ nnoremap <Leader>pl :NERDTreeFind<CR>
 nnoremap <Leader>ps :Ag<CR>
 nnoremap <Leader>pt :NERDTreeToggle<CR>
 nnoremap <Leader>pw :Ag <C-R><C-W><CR>
-nnoremap <Leader>p! :VimuxPromptCommand<CR>
-nnoremap <Leader>p!! :VimuxRunLastCommand<CR>
+
+" Shell
+nnoremap <Leader>st :call VimuxRunCommand("clear; ./script/test")<CR>
+nnoremap <Leader>sp :VimuxPromptCommand<CR>
+nnoremap <Leader>sl :VimuxRunLastCommand<CR>
+nnoremap <Leader>sy :VimuxInspectRunner<CR>
+nnoremap <Leader>ss :VimuxInterruptRunner<CR>
 
 " Writing
 nnoremap <Leader>wd :Goyo<CR>
