@@ -27,6 +27,7 @@ brew 'unrar'
 brew 'watch'
 brew 'wget'
 brew 'xz'
+brew 'zsh'
 
 cask 'colorpicker-hex'
 cask 'franz'
