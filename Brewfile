@@ -38,9 +38,12 @@ cask 'spotify'
 
 case Socket.gethostname
 when /seldon/i
+  cask 'arq'
   cask 'cleanmymac'
   cask 'docker'
+  cask 'firefox'
   cask 'istat-menus'
+  cask 'kindle'
 end
 
 # vim: filetype=ruby
