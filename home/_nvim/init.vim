@@ -8,6 +8,7 @@ Plug 'ervandew/supertab'
 Plug 'godlygeek/tabular'
 Plug 'junegunn/fzf.vim'
 Plug 'junegunn/goyo.vim'
+Plug 'rhysd/conflict-marker.vim'
 Plug 'scrooloose/nerdtree'
 Plug 'tpope/vim-fugitive'
 Plug 'vim-airline/vim-airline'
@@ -100,7 +101,7 @@ augroup END
 autocmd Filetype gitcommit setlocal textwidth=72
 autocmd Filetype gitcommit,markdown setlocal spell
 
-autocmd Filetype java setlocal ts=4 sts=4 sw=4
+autocmd Filetype java setlocal ts=4 sts=4 sw=4 tw=100
 autocmd Filetype cfg setlocal ft=dosini ts=4 sts=4 sw=4
 
 command! -bang -nargs=* Ag
