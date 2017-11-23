@@ -35,8 +35,6 @@ brew 'zplug'
 brew 'zsh'
 
 cask 'anki'
-cask 'colorpicker'
-cask 'colorpicker-hex'
 cask 'firefox'
 cask 'franz'
 cask 'istat-menus'
