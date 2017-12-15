@@ -22,6 +22,7 @@ Plug 'iCyMind/NeoSolarized'
 " Languages
 
 Plug 'keith/swift.vim'
+Plug 'mxw/vim-jsx'
 Plug 'plasticboy/vim-markdown'
 
 call plug#end()
