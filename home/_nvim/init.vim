@@ -76,8 +76,6 @@ let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#fnamemod = ':t'
 let g:airline#extensions#tabline#show_buffers = 0
 
-let g:goyo_width = 85
-
 let g:vim_markdown_conceal = 0
 let g:vim_markdown_folding_disabled = 1
 let g:vim_markdown_frontmatter = 1
@@ -134,6 +132,3 @@ nnoremap <Leader>sp :VimuxPromptCommand<CR>
 nnoremap <Leader>sl :VimuxRunLastCommand<CR>
 nnoremap <Leader>sy :VimuxInspectRunner<CR>
 nnoremap <Leader>ss :VimuxInterruptRunner<CR>
-
-" Writing
-nnoremap <Leader>wd :Goyo<CR>
