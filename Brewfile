@@ -40,7 +40,6 @@ brew 'zsh'
 
 cask 'anki'
 cask 'firefox'
-cask 'franz'
 cask 'gifox'
 cask 'istat-menus'
 cask 'iterm2'
