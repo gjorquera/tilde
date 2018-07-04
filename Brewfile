@@ -1,7 +1,6 @@
 require 'socket'
 
-tap 'caskroom/cask'
-tap 'caskroom/versions'
+tap 'homebrew/cask'
 tap 'neovim/neovim'
 
 brew 'aspell'
