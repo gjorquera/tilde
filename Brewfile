@@ -1,14 +1,13 @@
 require 'socket'
 
 tap 'homebrew/cask'
+tap 'homebrew/cask-fonts'
 tap 'neovim/neovim'
 
 brew 'aspell'
 brew 'awscli'
 brew 'bats'
 brew 'cmake'
-brew 'convox'
-brew 'ffmpeg'
 brew 'findutils'
 brew 'fzf'
 brew 'git'
@@ -28,7 +27,6 @@ brew 'reattach-to-user-namespace'
 brew 'rsync'
 brew 'ruby-build'
 brew 'sloccount'
-brew 'terraform'
 brew 'the_silver_searcher'
 brew 'tmux'
 brew 'tree'
@@ -48,14 +46,18 @@ cask 'keepingyouawake'
 cask 'kindle'
 cask 'mactex'
 cask 'skitch'
-cask 'skype'
 cask 'spectacle'
 cask 'spotify'
 
 case Socket.gethostname
 when /seldon/i
+  brew 'ffmpeg'
+  brew 'convox'
+  brew 'terraform'
+
   cask 'arq'
   cask 'cleanmymac'
+  cask 'skype'
 end
 
 # vim: filetype=ruby
