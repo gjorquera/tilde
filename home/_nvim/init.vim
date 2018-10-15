@@ -1,47 +1,46 @@
-call plug#begin('~/.config/nvim/plugged')
+call plug#begin('~/.vim/plugged')
 
 " Core
+Plug 'tpope/vim-sensible'
 
+" Integrations
 Plug 'benmills/vimux'
 Plug 'christoomey/vim-tmux-navigator'
+
+" Completion
 Plug 'ervandew/supertab'
+
+" Interface
 Plug 'godlygeek/tabular'
 Plug 'junegunn/fzf.vim'
-Plug 'junegunn/goyo.vim'
-Plug 'rhysd/conflict-marker.vim'
 Plug 'scrooloose/nerdtree'
+Plug 'tpope/vim-fugitive'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 
 " Themes
-
 Plug 'iCyMind/NeoSolarized'
 
-" Languages
-
+" Language
+Plug 'keith/rspec.vim'
 Plug 'keith/swift.vim'
 Plug 'mxw/vim-jsx'
-Plug 'plasticboy/vim-markdown'
+Plug 'rhysd/conflict-marker.vim'
+Plug 'tfnico/vim-gradle'
+Plug 'tpope/vim-markdown'
+Plug 'vim-scripts/groovy.vim'
 
 call plug#end()
 
-syntax on
-filetype plugin indent on
-
 set background=dark
-set backspace=indent,eol,start
+set colorcolumn=+1
 set cpt-=t
 set cursorline
 set expandtab
 set fillchars+=vert:│
-set formatoptions+=rn
-set formatoptions-=t
 set hlsearch
 set ignorecase
-set incsearch
 set isfname-=:
-set laststatus=2
-set list listchars=tab:»»,trail:·,nbsp:·
 set modelines=1
 set mouse-=a
 set nobackup
@@ -52,12 +51,12 @@ set noswapfile
 set novisualbell
 set numberwidth=5
 set relativenumber
-set rtp+=/usr/local/opt/fzf
+set rtp+=~/.fzf
 set shiftwidth=2
 set showtabline=2
 set smartcase
 set smartindent
-set spellfile=$HOME/.config/nvim/spell/en.utf-8.add
+set spellfile=$HOME/.spell/en.utf-8.add
 set splitbelow
 set splitright
 set tabstop=2
@@ -84,52 +83,44 @@ let g:vim_markdown_frontmatter = 1
 let g:VimuxHeight = "30"
 let g:VimuxOrientation = "h"
 
-let g:vimwiki_list = [{'syntax': 'markdown', 'ext': '.md'}]
-
-
 colorscheme NeoSolarized
 
 autocmd VimResized * wincmd =
 
-augroup BgHighlight
-  autocmd!
-  autocmd WinEnter * set colorcolumn=+1
-  autocmd WinEnter * set cul
-  autocmd WinLeave * set colorcolumn=0
-  autocmd WinLeave * set nocul
-augroup END
-
-autocmd Filetype gitcommit setlocal textwidth=72
-autocmd Filetype gitcommit,markdown setlocal spell
-
-autocmd Filetype java setlocal ts=4 sts=4 sw=4 tw=100
-autocmd Filetype cfg setlocal ft=dosini ts=4 sts=4 sw=4
-
-command! -bang -nargs=* Ag
-  \ call fzf#vim#ag(<q-args>,
-  \                 <bang>0 ? fzf#vim#with_preview('up:60%')
-  \                         : fzf#vim#with_preview('right:50%:hidden', '?'),
-  \                 <bang>0)
+autocmd Filetype gitcommit  setlocal textwidth=72 spell
+autocmd Filetype markdown   setlocal spell
+autocmd Filetype java       setlocal ts=4 sts=4 sw=4 tw=120
+autocmd Filetype cfg        setlocal ts=4 sts=4 sw=4 ft=dosini
 
 let mapleader = "\<Space>"
 
 " Git
 nnoremap <Leader>gb :Gblame<CR>
-nnoremap <Leader>gf :BCommits<CR>
-nnoremap <Leader>gl :Commits<CR>
-nnoremap <Leader>gs :GFiles?<CR>
+
+" Find
+nnoremap <Leader>fl :nohlsearch<CR>
 
 " Project
 nnoremap <Leader>pb :Buffers<CR>
 nnoremap <Leader>pf :Files<CR>
 nnoremap <Leader>pl :NERDTreeFind<CR>
-nnoremap <Leader>ps :Ag<CR>
 nnoremap <Leader>pt :NERDTreeToggle<CR>
-nnoremap <Leader>pw :Ag <C-R><C-W><CR>
+
+" Search
+nnoremap <Leader>ss :Ag<CR>
+nnoremap <Leader>sw :Ag <C-R><C-W><CR>
 
 " Shell
-nnoremap <Leader>st :call VimuxRunCommand("clear; ./script/test")<CR>
-nnoremap <Leader>sp :VimuxPromptCommand<CR>
-nnoremap <Leader>sl :VimuxRunLastCommand<CR>
-nnoremap <Leader>sy :VimuxInspectRunner<CR>
-nnoremap <Leader>ss :VimuxInterruptRunner<CR>
+nnoremap <Leader>rp :VimuxPromptCommand<CR>
+nnoremap <Leader>rl :VimuxRunLastCommand<CR>
+
+" Text
+nnoremap <Leader>tps vip:sort<CR>
+
+" VIM
+inoremap jk <ESC>
+inoremap <ESC> <NOP>
+inoremap <C-C> <NOP>
+nnoremap <Leader>vo :vsplit $MYVIMRC<CR>
+nnoremap <Leader>vp :set paste!<CR>
+nnoremap <Leader>vr :source $MYVIMRC<CR>
