@@ -12,6 +12,7 @@ Plug 'ervandew/supertab'
 
 " Interface
 Plug 'godlygeek/tabular'
+Plug 'junegunn/fzf', { 'do': './install --all --no-bash --no-fish' }
 Plug 'junegunn/fzf.vim'
 Plug 'scrooloose/nerdtree'
 Plug 'tpope/vim-fugitive'
@@ -51,7 +52,6 @@ set noswapfile
 set novisualbell
 set numberwidth=5
 set relativenumber
-set rtp+=~/.fzf
 set shiftwidth=2
 set showtabline=2
 set smartcase
@@ -101,7 +101,6 @@ nnoremap <Leader>gb :Gblame<CR>
 nnoremap <Leader>fl :nohlsearch<CR>
 
 " Project
-nnoremap <Leader>pb :Buffers<CR>
 nnoremap <Leader>pf :Files<CR>
 nnoremap <Leader>pl :NERDTreeFind<CR>
 nnoremap <Leader>pt :NERDTreeToggle<CR>
