@@ -1,4 +1,4 @@
-[ -z "$TMUX" ] && tmux new-session -A -s main && return
+[ -z "$TMUX" ] && exec tmux new-session -A -s main
 
 # Aliases
 
