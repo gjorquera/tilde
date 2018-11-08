@@ -42,6 +42,7 @@ set fillchars+=vert:│
 set hlsearch
 set ignorecase
 set isfname-=:
+set list listchars=tab:»»,trail:·,nbsp:·
 set modelines=1
 set mouse-=a
 set nobackup
