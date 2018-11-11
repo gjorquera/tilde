@@ -86,12 +86,16 @@ let g:VimuxOrientation = "h"
 
 colorscheme NeoSolarized
 
-autocmd VimResized * wincmd =
+augroup custom
+  autocmd!
 
-autocmd Filetype gitcommit  setlocal textwidth=72 spell
-autocmd Filetype markdown   setlocal spell
-autocmd Filetype java       setlocal ts=4 sts=4 sw=4 tw=120
-autocmd Filetype cfg        setlocal ts=4 sts=4 sw=4 ft=dosini
+  autocmd VimResized * wincmd =
+
+  autocmd Filetype gitcommit  setlocal textwidth=72 spell
+  autocmd Filetype markdown   setlocal spell
+  autocmd Filetype java       setlocal ts=4 sts=4 sw=4 tw=120
+  autocmd Filetype cfg        setlocal ts=4 sts=4 sw=4 ft=dosini
+augroup END
 
 let mapleader = "\<Space>"
 
