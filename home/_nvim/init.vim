@@ -122,6 +122,8 @@ nnoremap <Leader>rl :VimuxRunLastCommand<CR>
 nnoremap <Leader>tps vip:sort<CR>
 
 " VIM
+noremap <C-M> :w<CR>
+inoremap <C-M> <C-O>:w<CR>
 inoremap jk <ESC>
 inoremap <ESC> <NOP>
 inoremap <C-C> <NOP>
