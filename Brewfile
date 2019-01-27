@@ -46,11 +46,12 @@ cask 'spectacle'
 cask 'spotify'
 
 case Socket.gethostname
-when /seldon/i
+when /windrunner/i
   brew 'ffmpeg'
 
   cask 'arq'
   cask 'cleanmymac'
+  cask 'clover-configurator'
   cask 'skype'
 end
 
