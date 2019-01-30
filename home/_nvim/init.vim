@@ -93,7 +93,8 @@ augroup custom
 
   autocmd Filetype gitcommit  setlocal textwidth=72 spell
   autocmd Filetype markdown   setlocal spell
-  autocmd Filetype java       setlocal ts=4 sts=4 sw=4 tw=120
+  autocmd Filetype java       setlocal ts=4 sts=4 sw=4 tw=120 spell
+  autocmd Filetype kotlin     setlocal ts=4 sts=4 sw=4 tw=120 spell
   autocmd Filetype cfg        setlocal ts=4 sts=4 sw=4 ft=dosini
 augroup END
 
