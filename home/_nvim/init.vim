@@ -121,6 +121,7 @@ nnoremap <Leader>rl :VimuxRunLastCommand<CR>
 
 " Text
 nnoremap <Leader>tps vip:sort<CR>
+vnoremap <Leader>tws d:execute 'normal a' . join(sort(split(getreg('"'))), ' ')<CR>
 
 " VIM
 noremap <C-Q> :w<CR>
