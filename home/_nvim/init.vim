@@ -35,7 +35,7 @@ call plug#end()
 
 set background=dark
 set colorcolumn=+1
-set cpt-=t
+set complete-=t
 set cursorline
 set expandtab
 set fillchars+=vert:│
@@ -93,9 +93,9 @@ augroup custom
 
   autocmd Filetype gitcommit  setlocal textwidth=72 spell
   autocmd Filetype markdown   setlocal spell
-  autocmd Filetype java       setlocal ts=4 sts=4 sw=4 tw=120 spell
-  autocmd Filetype kotlin     setlocal ts=4 sts=4 sw=4 tw=120 spell
-  autocmd Filetype cfg        setlocal ts=4 sts=4 sw=4 ft=dosini
+  autocmd Filetype java       setlocal shiftwidth=4 softtabstop=4 spell tabstop=4 textwidth=120
+  autocmd Filetype kotlin     setlocal shiftwidth=4 softtabstop=4 spell tabstop=4 textwidth=120
+  autocmd Filetype cfg        setlocal filetype=dosini shiftwidth=4 softtabstop=4 tabstop=4
 augroup END
 
 let mapleader = "\<Space>"
