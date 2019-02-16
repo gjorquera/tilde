@@ -53,14 +53,15 @@ set noswapfile
 set novisualbell
 set numberwidth=5
 set relativenumber
-set shiftwidth=2
+set shiftwidth=4
 set showtabline=2
 set smartcase
 set smartindent
 set spellfile=$HOME/.spell/en.utf-8.add
 set splitbelow
 set splitright
-set tabstop=2
+set tabstop=4
+set softtabstop=4
 set textwidth=80
 set wildignore+=*/tmp/*,*.so,*.o
 
@@ -85,18 +86,7 @@ let g:VimuxHeight = "30"
 let g:VimuxOrientation = "h"
 
 colorscheme NeoSolarized
-
-augroup custom
-  autocmd!
-
-  autocmd VimResized * wincmd =
-
-  autocmd Filetype gitcommit  setlocal textwidth=72 spell
-  autocmd Filetype markdown   setlocal spell
-  autocmd Filetype java       setlocal shiftwidth=4 softtabstop=4 spell tabstop=4 textwidth=120
-  autocmd Filetype kotlin     setlocal shiftwidth=4 softtabstop=4 spell tabstop=4 textwidth=120
-  autocmd Filetype cfg        setlocal filetype=dosini shiftwidth=4 softtabstop=4 tabstop=4
-augroup END
+autocmd VimResized * wincmd =
 
 let mapleader = "\<Space>"
 
