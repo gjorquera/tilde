@@ -55,14 +55,13 @@ cask 'spotify'
 
 if host_type == :workstation || host_type == :laptop
   cask 'cleanmymac'
+  cask 'skype'
 end
 
 if host_type == :workstation
   brew 'ffmpeg'
-
   cask 'arq'
   cask 'clover-configurator'
-  cask 'skype'
 end
 
 # vim: filetype=ruby
