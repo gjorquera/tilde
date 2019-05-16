@@ -29,6 +29,7 @@ Plug 'mxw/vim-jsx'
 Plug 'plasticboy/vim-markdown'
 Plug 'rhysd/conflict-marker.vim'
 Plug 'tfnico/vim-gradle'
+Plug 'tpope/vim-liquid'
 Plug 'vim-scripts/groovy.vim'
 
 call plug#end()
