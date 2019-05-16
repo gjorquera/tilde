@@ -26,9 +26,9 @@ Plug 'iCyMind/NeoSolarized'
 Plug 'keith/rspec.vim'
 Plug 'keith/swift.vim'
 Plug 'mxw/vim-jsx'
+Plug 'plasticboy/vim-markdown'
 Plug 'rhysd/conflict-marker.vim'
 Plug 'tfnico/vim-gradle'
-Plug 'tpope/vim-markdown'
 Plug 'vim-scripts/groovy.vim'
 
 call plug#end()
