@@ -1,4 +1,12 @@
 require 'socket'
+host_type = case Socket.gethostname
+when /windrunner/i
+  :workstation
+when /skybreaker/i
+  :laptop
+else
+  :work
+end
 
 tap 'homebrew/cask'
 tap 'homebrew/cask-fonts'
@@ -45,12 +53,14 @@ cask 'skitch'
 cask 'spectacle'
 cask 'spotify'
 
-case Socket.gethostname
-when /windrunner/i
+if host_type == :workstation || host_type == :laptop
+  cask 'cleanmymac'
+end
+
+if host_type == :workstation
   brew 'ffmpeg'
 
   cask 'arq'
-  cask 'cleanmymac'
   cask 'clover-configurator'
   cask 'skype'
 end
