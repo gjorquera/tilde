@@ -37,7 +37,7 @@ alias gwD='git diff --no-ext-diff --word-diff'
 alias gwd='git diff --no-ext-diff'
 alias gws='git status --short'
 alias less="less -r"
-alias ls="ls -Gh --color"
+alias ls="ls -Gh"
 alias vim="nvim"
 
 # Completion
