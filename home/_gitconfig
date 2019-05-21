@@ -18,3 +18,5 @@
 	name = Gaston Jorquera
 [include]
 	path = ~/.gitconfig.local
+[commit]
+	template = ~/.gitmessage
