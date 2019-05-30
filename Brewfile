@@ -54,12 +54,11 @@ cask 'skitch'
 cask 'spectacle'
 cask 'spotify'
 
-if host_type == :workstation || host_type == :laptop
+case host_type
+when :laptop
   cask 'cleanmymac'
   cask 'skype'
-end
-
-if host_type == :workstation
+when :workstation
   brew 'ffmpeg'
   cask 'arq'
   cask 'clover-configurator'
