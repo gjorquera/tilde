@@ -14,6 +14,7 @@ Plug 'ervandew/supertab'
 Plug 'godlygeek/tabular'
 Plug 'junegunn/fzf', { 'do': './install --all --no-bash --no-fish' }
 Plug 'junegunn/fzf.vim'
+Plug 'junegunn/goyo.vim'
 Plug 'scrooloose/nerdtree'
 Plug 'tpope/vim-fugitive'
 Plug 'vim-airline/vim-airline'
@@ -112,6 +113,7 @@ nnoremap <Leader>rl :VimuxRunLastCommand<CR>
 
 " Text
 nnoremap <Leader>tps vip:sort<CR>
+nnoremap <Leader>td :Goyo<CR>
 vnoremap <Leader>tws d:execute 'normal a' . join(sort(split(getreg('"'))), ' ')<CR>
 
 " VIM
