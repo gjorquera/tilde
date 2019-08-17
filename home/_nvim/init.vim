@@ -20,6 +20,9 @@ Plug 'tpope/vim-fugitive'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 
+" Extensions
+Plug 'vimwiki/vimwiki'
+
 " Themes
 Plug 'iCyMind/NeoSolarized'
 
@@ -86,6 +89,10 @@ let g:vim_markdown_frontmatter = 1
 
 let g:VimuxHeight = "30"
 let g:VimuxOrientation = "h"
+
+let g:vimwiki_list = [{'path': '~/vimwiki/',
+                      \ 'syntax': 'markdown',
+                      \ 'ext': '.md'}]
 
 colorscheme NeoSolarized
 autocmd VimResized * wincmd =
