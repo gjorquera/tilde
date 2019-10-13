@@ -20,9 +20,6 @@ Plug 'tpope/vim-fugitive'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 
-" Extensions
-Plug 'vimwiki/vimwiki'
-
 " Themes
 Plug 'iCyMind/NeoSolarized'
 
