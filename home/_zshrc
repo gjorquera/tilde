@@ -79,9 +79,7 @@ DEFAULT_USER="$(whoami)"
 # Zsh Opts
 
 KEYTIMEOUT=7
-bindkey -v
 bindkey "^R" history-incremental-search-backward
-bindkey jk vi-cmd-mode
 setopt promptsubst
 
 # Custom Local Settings
