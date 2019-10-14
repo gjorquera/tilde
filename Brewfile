@@ -66,6 +66,12 @@ when :workstation
   brew 'ffmpeg'
   cask 'arq'
   cask 'clover-configurator'
+when :work
+  tap 'homebrew/services'
+  cask 'alfred'
+  cask 'google-chrome'
+  cask 'omnifocus'
+  cask 'sqlworkbenchj'
 end
 
 # vim: filetype=ruby
