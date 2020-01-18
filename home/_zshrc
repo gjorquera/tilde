@@ -40,13 +40,6 @@ alias less="less -r"
 alias ls="ls -Gh"
 alias vim="nvim"
 
-# Completion
-
-autoload -Uz compinit
-zstyle ':completion:*' menu select
-fpath=(/usr/local/share/zsh/site-functions $fpath)
-compinit
-
 # FZF
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
