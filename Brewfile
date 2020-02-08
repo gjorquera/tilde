@@ -58,11 +58,11 @@ cask 'spotify'
 
 case host_type
 when :laptop
+  cask 'arq'
   cask 'cleanmymac'
   cask 'skype'
 when :workstation
   brew 'ffmpeg'
-  cask 'arq'
   cask 'clover-configurator'
 when :work
   tap 'homebrew/services'
