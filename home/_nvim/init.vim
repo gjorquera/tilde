@@ -141,3 +141,10 @@ inoremap <C-C> <NOP>
 nnoremap <Leader>vo :vsplit $MYVIMRC<CR>
 nnoremap <Leader>vp :set paste!<CR>
 nnoremap <Leader>vr :source $MYVIMRC<CR>
+
+" Zettelkasten
+noremap ,,id "=strftime("%Y%m%d%H%M%S")<CR>P
+inoremap ,,id <C-R>=strftime("%Y%m%d%H%M%S")<CR>
+inoremap ,,b ---<CR>type: ##buffer<CR>tags:<CR>backlinks:<CR>---<CR>
+inoremap ,,c ---<CR>type: ##content<CR>tags:<CR>backlinks:<CR>---<CR>
+inoremap ,,s ---<CR>type: ##structure<CR>tags:<CR>backlinks:<CR>---<CR>

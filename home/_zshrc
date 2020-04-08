@@ -39,6 +39,7 @@ alias gws='git status --short'
 alias less="less -r"
 alias ls="ls -Gh"
 alias vim="nvim"
+alias zid="date +%Y%m%d%H%M%S"
 
 # FZF
 
