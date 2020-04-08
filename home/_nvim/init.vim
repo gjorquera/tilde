@@ -89,7 +89,6 @@ let g:vim_markdown_folding_disabled = 1
 let g:vim_markdown_frontmatter = 1
 let g:vim_markdown_math = 1
 let g:vim_markdown_new_list_item_indent = 0
-let g:vim_markdown_no_extensions_in_markdown = 1
 let g:vim_markdown_strikethrough = 1
 let g:vim_markdown_toc_autofit = 1
 let g:vim_markdown_fenced_languages = [
@@ -143,8 +142,4 @@ nnoremap <Leader>vp :set paste!<CR>
 nnoremap <Leader>vr :source $MYVIMRC<CR>
 
 " Zettelkasten
-noremap ,,id "=strftime("%Y%m%d%H%M%S")<CR>P
-inoremap ,,id <C-R>=strftime("%Y%m%d%H%M%S")<CR>
-inoremap ,,b ---<CR>type: ##buffer<CR>tags:<CR>backlinks:<CR>---<CR>
-inoremap ,,c ---<CR>type: ##content<CR>tags:<CR>backlinks:<CR>---<CR>
-inoremap ,,s ---<CR>type: ##structure<CR>tags:<CR>backlinks:<CR>---<CR>
+nnoremap ,,n :Ag # <CR>
