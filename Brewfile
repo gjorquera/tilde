@@ -38,6 +38,7 @@ brew 'python'
 brew 'reattach-to-user-namespace'
 brew 'rsync'
 brew 'the_silver_searcher'
+brew 'tidy-html5'
 brew 'tmux'
 brew 'tree'
 brew 'unrar'
@@ -68,9 +69,12 @@ when :workstation
   cask 'clover-configurator'
 when :work
   tap 'homebrew/services'
+  brew 'expect'
   cask 'alfred'
+  cask 'amazon-chime'
   cask 'google-chrome'
   cask 'omnifocus'
+  cask 'skype'
   cask 'sqlworkbenchj'
 end
 
