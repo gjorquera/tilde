@@ -899,6 +899,12 @@
         "options": {
           "full_name": "zoomus"
         }
+      },
+      "dropbox": {
+        "version": "latest",
+        "options": {
+          "full_name": "dropbox"
+        }
       }
     }
   },

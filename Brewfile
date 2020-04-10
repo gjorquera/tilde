@@ -49,6 +49,7 @@ brew 'xz'
 brew 'zsh'
 
 cask 'anki'
+cask 'dropbox'
 cask 'firefox'
 cask 'font-fira-code'
 cask 'istat-menus'
@@ -64,7 +65,6 @@ case host_type
 when :laptop
   cask 'arq'
   cask 'cleanmymac'
-  cask 'zoomus'
 when :workstation
   brew 'ffmpeg'
   cask 'clover-configurator'
