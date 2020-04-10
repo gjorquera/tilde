@@ -143,3 +143,4 @@ nnoremap <Leader>vr :source $MYVIMRC<CR>
 
 " Zettelkasten
 nnoremap ,,n :Ag # <CR>
+nnoremap ,,l :let @" = expand("%")<CR>
