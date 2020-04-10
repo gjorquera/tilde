@@ -24,10 +24,10 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'iCyMind/NeoSolarized'
 
 " Language
+Plug 'gjorquera/vim-markdown'
 Plug 'keith/rspec.vim'
 Plug 'keith/swift.vim'
 Plug 'mxw/vim-jsx'
-Plug 'plasticboy/vim-markdown'
 Plug 'rhysd/conflict-marker.vim'
 Plug 'rust-lang/rust.vim'
 Plug 'tfnico/vim-gradle'
