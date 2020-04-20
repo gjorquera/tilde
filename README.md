@@ -6,24 +6,33 @@ My dotfiles' home.
 
 1. Create the `Code` directory:
 
-        $ mkdir -p ~/Code
-        $ cd ~/Code
+```bash
+mkdir -p ~/Code
+cd ~/Code
+```
 
 1. Clone the repo:
 
-        $ git clone git@github.com:gjorquera/tilde
+```bash
+git clone git@github.com:gjorquera/tilde
+```
 
-1. Install [Homebrew](https://brew.sh/) and [Homebrew Bundle](https://github.com/Homebrew/homebrew-bundle).
+1. Install [Homebrew](https://brew.sh/) and [Homebrew
+Bundle](https://github.com/Homebrew/homebrew-bundle).
 
 1. Install Homebrew packages:
 
-        $ brew bundle
+```bash
+brew bundle
+```
 
 1. Link the dotfiles you want:
 
-        $ ln -sf ~/Code/tilde/home/_<dotfile> ~/.<dotfile>
+```bash
+ln -sf ~/Code/tilde/<app>/_<file> ~/.<file>
+```
 
-## Why?
+## Why
 
 For a while I used [boxen](http://boxen.github.com),
 [oh-my-zsh](https://github.com/robbyrussell/oh-my-zsh), and then
