@@ -28,7 +28,7 @@ alias gwd='git diff --no-ext-diff'
 alias gws='git status --short'
 alias less="less -r"
 alias ls="ls -Gh"
-alias vim="nvim"
+whence nvim && alias vim="nvim"
 
 # FZF
 
