@@ -57,6 +57,10 @@ setopt hist_verify
 setopt inc_append_history
 setopt share_history
 
+# Customization
+
+[ -f ~/.zshrc.local ] && source ~/.zshrc.local
+
 # Plugins
 
 fpath+=$HOME/Code/tilde/zsh
