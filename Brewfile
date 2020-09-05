@@ -1,45 +1,19 @@
 require 'socket'
-host_type = case Socket.gethostname
+host = case Socket.gethostname
 when /windrunner/i
-  :workstation
-when /skybreaker/i
   :laptop
 else
   :work
 end
 
 tap 'homebrew/cask'
-tap 'homebrew/cask-fonts'
-tap 'neovim/neovim'
+tap 'homebrew/cask-versions'
 
-brew 'aspell'
-brew 'automake'
-brew 'awscli'
-brew 'bat'
-brew 'bats'
-brew 'cmake'
-brew 'findutils'
-brew 'gettext'
 brew 'git'
-brew 'gnu-tar'
-brew 'goaccess'
-brew 'graphviz'
-brew 'httpie'
-brew 'hugo'
 brew 'jq'
-brew 'libtool'
-brew 'mdbook'
 brew 'neovim'
-brew 'ninja'
-brew 'openssl'
-brew 'p7zip'
-brew 'parallel'
-brew 'pkg-config'
-brew 'python'
-brew 'reattach-to-user-namespace'
-brew 'rsync'
-brew 'the_silver_searcher'
-brew 'tidy-html5'
+brew 'rclone'
+brew 'rg'
 brew 'tmux'
 brew 'tree'
 brew 'unrar'
@@ -48,35 +22,12 @@ brew 'wget'
 brew 'xz'
 brew 'zsh'
 
-cask 'anki'
-cask 'dropbox'
-cask 'firefox'
+cask 'firefox-developer-edition'
 cask 'font-fira-code'
 cask 'istat-menus'
 cask 'iterm2'
 cask 'keepingyouawake'
-cask 'kindle'
-cask 'mactex'
-cask 'skitch'
+cask 'monitorcontrol'
+cask 'osxfuse'
 cask 'spectacle'
 cask 'spotify'
-
-case host_type
-when :laptop
-  cask 'arq'
-  cask 'cleanmymac'
-when :workstation
-  brew 'ffmpeg'
-  cask 'clover-configurator'
-when :work
-  tap 'homebrew/services'
-  brew 'expect'
-  cask 'alfred'
-  cask 'amazon-chime'
-  cask 'google-chrome'
-  cask 'omnifocus'
-  cask 'skype'
-  cask 'sqlworkbenchj'
-end
-
-# vim: filetype=ruby
