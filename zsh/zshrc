@@ -1,0 +1,68 @@
+[ -z "$TMUX" ] && exec tmux new-session -A -s main
+
+# Aliases
+
+alias g='git'
+alias gb='git branch'
+alias gbX='git branch --delete --force'
+alias gbx='git branch --delete'
+alias gc='git commit --verbose'
+alias gcF='git commit --amend --verbose'
+alias gcf='git commit --amend --no-edit'
+alias gco='git checkout'
+alias gf='git fetch'
+alias gfa='git fetch --all'
+alias gfm='git pull'
+alias gia='git add'
+alias gid='git diff --no-ext-diff --cached'
+alias glg='git log --topo-order --all --graph --pretty=format:"%C(green)%h%C(reset) %s%C(red)%d%C(reset)%n"'
+alias gm='git merge'
+alias gp='git push'
+alias gra='git rebase --abort'
+alias grc='git rebase --continue'
+alias gri='git rebase --interactive'
+alias grs='git rebase --skip'
+alias gs='git stash'
+alias gss='git stash save --include-untracked'
+alias gwd='git diff --no-ext-diff'
+alias gws='git status --short'
+alias less="less -r"
+alias ll="ls -la"
+whence nvim 1>/dev/null && alias vim="nvim"
+
+export CLICOLOR=1
+export LSCOLORS=ExFxCxDxBxegedabagacad
+
+# History
+
+HISTSIZE=10000
+HISTFILE=$HOME/.zsh_history
+SAVEHIST=10000
+
+setopt extended_history
+setopt hist_expire_dups_first
+setopt hist_ignore_dups
+setopt hist_ignore_space
+setopt hist_verify
+setopt inc_append_history
+setopt share_history
+
+# Prompt
+
+fpath+=$HOME/Code/tilde/zsh
+
+autoload -U promptinit
+promptinit
+
+zstyle :prompt:pure:path color 142
+zstyle :prompt:pure:git:branch color 208
+zstyle :prompt:pure:git:action color 109
+zstyle :prompt:pure:git:dirty color 108
+zstyle :prompt:pure:git:arrow color 108
+zstyle :prompt:pure:git:stash color 108
+zstyle :prompt:pure:prompt:success color 109
+zstyle :prompt:pure:prompt:error color 124
+zstyle :prompt:pure:prompt:continuation color 175
+prompt pure
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
