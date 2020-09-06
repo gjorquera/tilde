@@ -30,6 +30,10 @@ alias less="less -r"
 alias ll="ls -la"
 whence nvim 1>/dev/null && alias vim="nvim"
 
+alias rcc='remote=$(cat ~/.config/rclone/mapping.json | jq -r ".\"$(pwd)\"") && [[ "$remote" != "null" ]] && rclone cryptcheck . $remote'
+alias rcF='remote=$(cat ~/.config/rclone/mapping.json | jq -r ".\"$(pwd)\"") && [[ "$remote" != "null" ]] && rclone --progress sync $remote .'
+alias rcP='remote=$(cat ~/.config/rclone/mapping.json | jq -r ".\"$(pwd)\"") && [[ "$remote" != "null" ]] && rclone --progress sync . $remote'
+
 export CLICOLOR=1
 export LSCOLORS=ExFxCxDxBxegedabagacad
 
