@@ -28,7 +28,6 @@ brew 'wget'
 brew 'xz'
 brew 'zsh'
 
-cask 'firefox-developer-edition'
 cask 'font-fira-code'
 cask 'istat-menus'
 cask 'iterm2'
@@ -40,8 +39,14 @@ cask 'skitch'
 cask 'spectacle'
 cask 'spotify'
 
-if host == :work
+case host
+when :laptop
+  cask 'firefox-developer-edition'
+when :work
   cask 'alfred'
+  cask 'amazon-chime'
+  cask 'discord'
+  cask 'firefox'
   cask 'gifox'
   cask 'google-chrome'
   cask 'omnifocus'
