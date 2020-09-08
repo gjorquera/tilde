@@ -2,7 +2,7 @@
   "entries": {
     "tap": {
       "homebrew/cask": {
-        "revision": "5beb10eb7902a2c781f86f7cfeddbdf8522cc1bf"
+        "revision": "d6c8994a8a126763834ff7ade80ec8338de0e03f"
       },
       "homebrew/cask-fonts": {
         "revision": "f07d4940c480ea4d6b55fc5617889533a1b66721"
@@ -14,7 +14,7 @@
         "revision": "64347a3a5761db1b392f1b30b045aeb4592e17a9"
       },
       "homebrew/cask-versions": {
-        "revision": "9c32ff41b163b7df0f302702fdec983347c7d62a"
+        "revision": "21c1ec097ef613d2481036b9fea6ed0b678cb7e1"
       }
     },
     "brew": {
@@ -303,25 +303,8 @@
         }
       },
       "neovim": {
-        "version": "0.4.4",
-        "bottle": {
-          "cellar": "/usr/local/Cellar",
-          "prefix": "/usr/local",
-          "files": {
-            "catalina": {
-              "url": "https://homebrew.bintray.com/bottles/neovim-0.4.4.catalina.bottle.tar.gz",
-              "sha256": "ade03fcf189ccd82e8b4627499113aed67a753b0e3ffa9662c15d7037f6ed617"
-            },
-            "mojave": {
-              "url": "https://homebrew.bintray.com/bottles/neovim-0.4.4.mojave.bottle.tar.gz",
-              "sha256": "e68135735b24df7e1318bb71c4fef6461884b2c7a166d756b4a21bd787a329a2"
-            },
-            "high_sierra": {
-              "url": "https://homebrew.bintray.com/bottles/neovim-0.4.4.high_sierra.bottle.tar.gz",
-              "sha256": "77773fc6e8ad7fd726e881850712f3995feef94548bfd6081599c5b682eb4411"
-            }
-          }
-        }
+        "version": "HEAD-1869f86",
+        "bottle": false
       },
       "ninja": {
         "version": "1.10.0",
@@ -541,7 +524,7 @@
         }
       },
       "tmux": {
-        "version": "3.1b",
+        "version": "HEAD-52e3d96_1",
         "bottle": {
           "cellar": ":any",
           "prefix": "/usr/local",
@@ -833,19 +816,19 @@
         "version": "2.1.0,020100.00"
       },
       "istat-menus": {
-        "version": "6.40",
+        "version": "6.0",
         "options": {
           "full_name": "istat-menus"
         }
       },
       "iterm2": {
-        "version": "3.3.12",
+        "version": "3.0.15",
         "options": {
           "full_name": "iterm2"
         }
       },
       "keepingyouawake": {
-        "version": "1.5.2",
+        "version": "1.4.1",
         "options": {
           "full_name": "keepingyouawake"
         }
@@ -962,9 +945,9 @@
         "macOS": "10.15.6"
       },
       "mojave": {
-        "HOMEBREW_VERSION": "2.2.11",
+        "HOMEBREW_VERSION": "2.5.0",
         "HOMEBREW_PREFIX": "/usr/local",
-        "Homebrew/homebrew-core": "0db55268d47ad4ff46c50bb7902cc139c89ac650",
+        "Homebrew/homebrew-core": "a8b422cb08d8059ca8b65345410d9428d7fb014f",
         "CLT": "10.3.0.0.1.1562985497",
         "Xcode": "11.3.1",
         "macOS": "10.14.6"
