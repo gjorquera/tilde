@@ -28,6 +28,7 @@ brew 'wget'
 brew 'xz'
 brew 'zsh'
 
+cask 'dropbox'
 cask 'font-fira-code'
 cask 'istat-menus'
 cask 'iterm2'
