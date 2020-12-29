@@ -1,2 +1,3 @@
+Brewfile.local
 home/_nvim/autoload/plug.vim.old
 home/_nvim/plugged/

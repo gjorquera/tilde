@@ -1,11 +1,3 @@
-require 'socket'
-host = case Socket.gethostname
-when /windrunner/i
-  :laptop
-else
-  :work
-end
-
 tap 'homebrew/cask'
 tap 'homebrew/cask-fonts'
 tap 'homebrew/cask-versions'
@@ -28,31 +20,30 @@ brew 'wget'
 brew 'xz'
 brew 'zsh'
 
-cask 'dropbox'
 cask 'font-fira-code'
+cask 'gifox'
 cask 'istat-menus'
 cask 'iterm2'
 cask 'keepingyouawake'
 cask 'kindle'
 cask 'monitorcontrol'
-cask 'osxfuse'
+cask 'obsidian'
 cask 'skitch'
 cask 'spectacle'
 cask 'spotify'
+cask 'sync'
+cask 'vnc-viewer'
 
-case host
-when :laptop
+require 'socket'
+case Socket.gethostname
+when /windrunner/i
   cask 'firefox-developer-edition'
-when :work
-  cask 'alfred'
-  cask 'amazon-chime'
-  cask 'discord'
-  cask 'firefox'
-  cask 'gifox'
-  cask 'google-chrome'
-  cask 'omnifocus'
-  cask 'slack'
-  cask 'sqlworkbenchj'
+else
+  local = File.expand_path('Brewfile.local', File.dirname(__FILE__))
+  if File.readable?(local)
+    file = File.read(local)
+    eval(file)
+  end
 end
 
 # vim: ft=ruby
