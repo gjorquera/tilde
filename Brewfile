@@ -37,6 +37,7 @@ cask 'vnc-viewer'
 require 'socket'
 case Socket.gethostname
 when /windrunner/i
+  cask 'cleanmymac'
   cask 'firefox-developer-edition'
 else
   local = File.expand_path('Brewfile.local', File.dirname(__FILE__))
