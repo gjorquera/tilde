@@ -3,9 +3,83 @@
 <plist version="1.0">
 <dict>
 	<key>build</key>
-	<string>1113</string>
+	<string>1157</string>
 	<key>preferences</key>
 	<dict>
+		<key>Battery_DisableBluetooth</key>
+		<integer>1</integer>
+		<key>Battery_DropdownOrderDisabled</key>
+		<string></string>
+		<key>Battery_MenubarCustomizeStates</key>
+		<integer>1</integer>
+		<key>Battery_MenubarMode</key>
+		<array>
+			<dict>
+				<key>key</key>
+				<string>3</string>
+				<key>uuid</key>
+				<string>95A97C8C-4FEE-464E-B65B-8D307C36644D</string>
+			</dict>
+			<dict>
+				<key>key</key>
+				<string>1</string>
+				<key>uuid</key>
+				<string>B8057D60-1A5E-4BE6-98F2-6683AF76FCEC</string>
+			</dict>
+		</array>
+		<key>Battery_MenubarModeBluetooth</key>
+		<array>
+			<dict>
+				<key>key</key>
+				<string>8</string>
+				<key>uuid</key>
+				<string>ADAF0C46-E6A3-4FF3-9D2C-A45060EA20C2</string>
+			</dict>
+			<dict>
+				<key>key</key>
+				<string>6</string>
+				<key>uuid</key>
+				<string>B4E72263-5CA5-433A-9010-336BBB1F6C08</string>
+			</dict>
+			<dict>
+				<key>key</key>
+				<string>6</string>
+				<key>uuid</key>
+				<string>D11C7159-EF4E-48B8-9136-A6CE61830205</string>
+			</dict>
+		</array>
+		<key>Battery_MenubarModeCharged</key>
+		<array/>
+		<key>Battery_MenubarModeCharging</key>
+		<array>
+			<dict>
+				<key>key</key>
+				<string>3</string>
+				<key>uuid</key>
+				<string>C570CAFB-B9B2-434B-813D-3C52307DB120</string>
+			</dict>
+			<dict>
+				<key>key</key>
+				<string>1</string>
+				<key>uuid</key>
+				<string>F95DC237-EA83-4EF0-BF88-FF6110A5BF21</string>
+			</dict>
+		</array>
+		<key>Battery_MenubarModeDraining</key>
+		<array>
+			<dict>
+				<key>key</key>
+				<string>3</string>
+				<key>uuid</key>
+				<string>5626222A-DBBF-49AF-963F-E44D9B30F493</string>
+			</dict>
+			<dict>
+				<key>key</key>
+				<string>1</string>
+				<key>uuid</key>
+				<string>18C78181-0019-4F5D-974B-483D39306836</string>
+			</dict>
+		</array>
 		<key>CPU_MenubarMode</key>
 		<array>
 			<dict>
@@ -13,6 +87,72 @@
 				<string>0</string>
 				<key>uuid</key>
 				<string>EC801AC6-44D6-47C5-AF38-2C283B1EA5EF</string>
+			</dict>
+		</array>
+		<key>CombinedDropdownDisplayMode</key>
+		<array>
+			<dict>
+				<key>key</key>
+				<string>2</string>
+				<key>uuid</key>
+				<string>96F60A99-E7CA-4987-BA60-4419FBBB160B</string>
+			</dict>
+			<dict>
+				<key>key</key>
+				<string>1</string>
+				<key>uuid</key>
+				<string>8F004C0A-B35F-4842-8D60-54E0B3CA91CC</string>
+			</dict>
+			<dict>
+				<key>key</key>
+				<string>3</string>
+				<key>uuid</key>
+				<string>1671114C-4261-47B3-980C-C3D92EBA978E</string>
+			</dict>
+			<dict>
+				<key>key</key>
+				<string>4</string>
+				<key>uuid</key>
+				<string>674D6030-A9BC-434A-8384-678AF908FCE1</string>
+			</dict>
+			<dict>
+				<key>key</key>
+				<string>5</string>
+				<key>uuid</key>
+				<string>FD2F1E4F-BA84-41DF-A706-4B99F4B1E684</string>
+			</dict>
+			<dict>
+				<key>key</key>
+				<string>6</string>
+				<key>uuid</key>
+				<string>E74BB419-76FA-437F-B59D-55EF59365F85</string>
+			</dict>
+		</array>
+		<key>CombinedMenubarDisplayMode</key>
+		<array>
+			<dict>
+				<key>key</key>
+				<string>2</string>
+				<key>uuid</key>
+				<string>2D080458-934D-484D-A046-F12BDB3ECEDD</string>
+			</dict>
+			<dict>
+				<key>key</key>
+				<string>1</string>
+				<key>uuid</key>
+				<string>B7D027CE-C154-4B35-AFC3-140C7805F2B3</string>
+			</dict>
+			<dict>
+				<key>key</key>
+				<string>3</string>
+				<key>uuid</key>
+				<string>686E4869-8EFD-4F53-9BBE-78ED14AEB93C</string>
+			</dict>
+			<dict>
+				<key>key</key>
+				<string>6</string>
+				<key>uuid</key>
+				<string>AFBEEFD6-5C74-4F46-B44F-B0B48E362026</string>
 			</dict>
 		</array>
 		<key>Disks_MenubarItems</key>
@@ -90,9 +230,11 @@
 				<key>key</key>
 				<string>1</string>
 				<key>uuid</key>
-				<string>B610F23C-F9C1-4C20-B16E-E272CACD556C</string>
+				<string>3504CFD3-4EBF-4AC7-B114-A175BADFBDD8</string>
 			</dict>
 		</array>
+		<key>Menubar-DetectedColor</key>
+		<string>0.37 0.37 0.37 1.00</string>
 		<key>MenubarSkinColor</key>
 		<integer>7</integer>
 		<key>MenubarSkinColor-Dark</key>
@@ -108,6 +250,8 @@
 		<key>Migrated_6.0</key>
 		<true/>
 		<key>Migrated_6.22</key>
+		<true/>
+		<key>Migrated_6.5</key>
 		<true/>
 		<key>Notifications-Enabled</key>
 		<false/>
@@ -176,10 +320,7 @@
 		<key>StatusItems-Order</key>
 		<array>
 			<integer>7</integer>
-			<integer>1</integer>
-			<integer>2</integer>
-			<integer>3</integer>
-			<integer>5</integer>
+			<integer>8</integer>
 		</array>
 		<key>Time_Cities</key>
 		<array>
@@ -232,6 +373,8 @@
 				<string>Europe/London</string>
 			</dict>
 		</array>
+		<key>Time_DropdownOrderDisabled</key>
+		<string></string>
 		<key>Time_MenubarFormat</key>
 		<array>
 			<dict>
@@ -253,6 +396,8 @@
 					</array>
 					<array/>
 				</array>
+				<key>lines</key>
+				<integer>1</integer>
 			</dict>
 		</array>
 		<key>Updater_Attempts</key>
@@ -261,18 +406,22 @@
 			<string>1</string>
 			<key>1113</key>
 			<string>1</string>
+			<key>1150</key>
+			<string>1</string>
+			<key>1157</key>
+			<string>1</string>
 		</dict>
 		<key>Zarya-TLE</key>
 		<dict>
 			<key>time</key>
-			<real>1598889927.2473021</real>
+			<real>1609429843.627738</real>
 			<key>tle</key>
 			<string>ISS (ZARYA)             
-1 25544U 98067A   20244.50735772  .00001357  00000-0  32568-4 0  9992
-2 25544  51.6469 335.7229 0001907  74.3669  35.9006 15.49202732243698</string>
+1 25544U 98067A   20366.36586220  .00001388  00000-0  33060-4 0  9995
+2 25544  51.6465  92.8260 0001147 168.5597 306.8389 15.49242490262580</string>
 		</dict>
 	</dict>
 	<key>version</key>
-	<string>6.40</string>
+	<string>6.51</string>
 </dict>
 </plist>
