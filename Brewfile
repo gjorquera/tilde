@@ -20,6 +20,7 @@ brew 'wget'
 brew 'xz'
 brew 'zsh'
 
+cask 'bibdesk'
 cask 'font-fira-code'
 cask 'gifox'
 cask 'istat-menus'
