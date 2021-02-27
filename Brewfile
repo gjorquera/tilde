@@ -33,6 +33,7 @@ cask 'skitch'
 cask 'spectacle'
 cask 'spotify'
 cask 'sync'
+cask 'telegram'
 cask 'vnc-viewer'
 
 require 'socket'
