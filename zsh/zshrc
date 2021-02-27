@@ -37,6 +37,10 @@ alias rcP='remote=$(cat ~/.config/rclone/mapping.json | jq -r ".\"$(pwd)\"") && 
 export CLICOLOR=1
 export LSCOLORS=ExFxCxDxBxegedabagacad
 
+# Completion
+
+autoload -Uz compinit && compinit
+
 # History
 
 HISTSIZE=10000
