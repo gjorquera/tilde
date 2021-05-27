@@ -9,7 +9,6 @@ brew 'jq'
 brew 'neovim'
 brew 'p7zip'
 brew 'parallel'
-brew 'rclone'
 brew 'rg'
 brew 'rsync'
 brew 'tmux'
@@ -37,6 +36,7 @@ cask 'vnc-viewer'
 require 'socket'
 case Socket.gethostname
 when /windrunner/i
+  brew 'snapraid'
   cask 'cleanmymac'
   cask 'firefox-developer-edition'
 else
