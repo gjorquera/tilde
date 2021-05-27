@@ -18,6 +18,7 @@ brew 'wget'
 brew 'xz'
 brew 'zsh'
 
+cask 'arq'
 cask 'bibdesk'
 cask 'font-fira-code'
 cask 'gifox'
