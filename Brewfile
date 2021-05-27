@@ -37,8 +37,8 @@ require 'socket'
 case Socket.gethostname
 when /windrunner/i
   brew 'snapraid'
+  cask 'brave-browser'
   cask 'cleanmymac'
-  cask 'firefox-developer-edition'
 else
   local = File.expand_path('Brewfile.local', File.dirname(__FILE__))
   if File.readable?(local)
