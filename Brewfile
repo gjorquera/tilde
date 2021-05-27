@@ -30,7 +30,6 @@ cask 'rectangle'
 cask 'skitch'
 cask 'spotify'
 cask 'sync'
-cask 'telegram'
 cask 'vnc-viewer'
 
 require 'socket'
