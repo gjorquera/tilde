@@ -21,6 +21,9 @@ window:
 
   startup_mode: "Maximized"
 
+selection:
+  save_to_clipboard: true
+
 font:
   normal:
     family: 'Fira Code'
