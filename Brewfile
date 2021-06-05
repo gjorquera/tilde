@@ -1,4 +1,5 @@
 tap 'homebrew/cask'
+tap 'homebrew/cask-drivers'
 tap 'homebrew/cask-fonts'
 tap 'homebrew/cask-versions'
 
@@ -39,6 +40,7 @@ when /windrunner/i
   brew 'snapraid'
   cask 'brave-browser'
   cask 'cleanmymac'
+  cask 'garmin-express'
 else
   local = File.expand_path('Brewfile.local', File.dirname(__FILE__))
   if File.readable?(local)
