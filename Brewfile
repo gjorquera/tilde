@@ -41,6 +41,7 @@ when /windrunner/i
   cask 'brave-browser'
   cask 'cleanmymac'
   cask 'garmin-express'
+  cask 'i1profiler'
 else
   local = File.expand_path('Brewfile.local', File.dirname(__FILE__))
   if File.readable?(local)
