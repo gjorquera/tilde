@@ -38,8 +38,8 @@ require 'socket'
 case Socket.gethostname
 when /windrunner/i
   brew 'snapraid'
-  cask 'brave-browser'
   cask 'cleanmymac'
+  cask 'firefox-developer-edition'
   cask 'garmin-express'
   cask 'i1profiler'
 else
