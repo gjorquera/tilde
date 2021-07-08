@@ -20,3 +20,6 @@
 	path = ~/.gitconfig.local
 [pull]
 	ff = only
+[gcrypt]
+	publish-participants = true
+	gpg-args = --use-agent
