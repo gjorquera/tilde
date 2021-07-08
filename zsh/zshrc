@@ -38,6 +38,8 @@ alias rcc='remote=$(cat ~/.config/rclone/mapping.json | jq -r ".\"$(pwd)\"") && 
 alias rcF='remote=$(cat ~/.config/rclone/mapping.json | jq -r ".\"$(pwd)\"") && [[ "$remote" != "null" ]] && rclone --progress sync $remote .'
 alias rcP='remote=$(cat ~/.config/rclone/mapping.json | jq -r ".\"$(pwd)\"") && [[ "$remote" != "null" ]] && rclone --progress sync . $remote'
 
+export GPG_TTY=$(tty)
+
 export CLICOLOR=1
 export LSCOLORS=ExFxCxDxBxegedabagacad
 
