@@ -21,7 +21,6 @@ brew 'xz'
 brew 'zsh'
 
 cask 'alacritty'
-cask 'arq'
 cask 'bibdesk'
 cask 'font-fira-code'
 cask 'gifox'
@@ -40,6 +39,7 @@ require 'socket'
 case Socket.gethostname
 when /windrunner/i
   brew 'snapraid'
+  cask 'arq'
   cask 'cleanmymac'
   cask 'firefox-developer-edition'
   cask 'garmin-express'
