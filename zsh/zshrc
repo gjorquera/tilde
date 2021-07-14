@@ -34,6 +34,10 @@ function bdate() {
   date -j -f "%s" "$(stat -f %B "$1")" "+%Y-%m-%d"
 }
 
+function zks() {
+  for f in $(rg -l "$1" | rg -v '^#'); do echo "$f - $(head -n 1 $f)"; done
+}
+
 alias rcc='remote=$(cat ~/.config/rclone/mapping.json | jq -r ".\"$(pwd)\"") && [[ "$remote" != "null" ]] && rclone cryptcheck . $remote'
 alias rcF='remote=$(cat ~/.config/rclone/mapping.json | jq -r ".\"$(pwd)\"") && [[ "$remote" != "null" ]] && rclone --progress sync $remote .'
 alias rcP='remote=$(cat ~/.config/rclone/mapping.json | jq -r ".\"$(pwd)\"") && [[ "$remote" != "null" ]] && rclone --progress sync . $remote'
